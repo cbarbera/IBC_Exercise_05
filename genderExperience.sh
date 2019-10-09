@@ -1,14 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
 # Exercise5 shell script
 # Task 1: creates a file containing unique combinations of gender and years of experience
 # Task 2: prints the information about the highest and lowest earners and number of women in top ten
-
-
-
-
-
-
-
-
 
 echo "Highest earner: " 
 sort --field-separator=',' -n -r -k4 $@ | head -n 1
