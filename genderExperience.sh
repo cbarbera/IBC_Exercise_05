@@ -17,3 +17,9 @@ sort --field-separator=',' -n -r -k4 $@ | head -n 10 | grep female | wc -l
 
 
 >>>>>>> a455ed25d08cf92df4741c59d654fd5e485a06e1
+
+# Task 3
+
+var1=$(cat wages.csv | cut -d ',' -f 3,4 | grep '16,' | sort --field-separator=',' -n -k2 | cut -d ',' -f 2 |  head -n 1)
+var2=$(cat wages.csv | cut -d ',' -f 3,4 | grep '12,' | sort --field-separator=',' -n -k2 | cut -d ',' -f 2 |  head -n 1)
+echo "$var1-$var2" | bc
